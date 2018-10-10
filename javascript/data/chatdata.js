@@ -1,19 +1,21 @@
+import {chatDataBuilder, setChatData, getChatDataz} from '../components/theSquareComponent.js';
+
 function executeThisCodeAfterFileLoaded () {
     const data = JSON.parse(this.responseText);
-    setCharacters(data.characters);
-    charactersBuilder(getCharacterz());
+    setChatData(data.chatMessages);
+    chatDataBuilder(getChatDataz());
   }
   
   function executeThisCodeIfXhrFails () {
     console.log('shit broke');
   }
   
-  const getCharacters = () => {
+  const getChatData = () => {
     let myRequest = new XMLHttpRequest();
     myRequest.addEventListener('load', executeThisCodeAfterFileLoaded);
     myRequest.addEventListener('error', executeThisCodeIfXhrFails);
-    myRequest.open('GET', './db/characters.json');
+    myRequest.open('GET', './db/chatData.json');
     myRequest.send();
   };
   
-  export {getCharacters};
+  export {getChatData};
