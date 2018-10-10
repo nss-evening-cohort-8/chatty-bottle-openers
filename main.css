@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+}
+
+img {
+    height: 125px;
+    width: 100px;
+}
+
+#checkboxes {
+    margin-left: 120px;
+}
+
+#navbar {
+    background-color: rgb(191, 184, 191);
+}
+
+button {
+    color: black;
+    background-color: rgb(191, 184, 191);
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+
+button:active {
+    outline-color: black;
+}
+
+span:active {
+    border: 1px dotted black;
+}
+
+input {
+    color: black;
+    background-color: white;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid gainsboro;
+    border-left: 1px solid gainsboro;
+}
+
