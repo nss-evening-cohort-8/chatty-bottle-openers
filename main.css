@@ -29,15 +29,15 @@ button:active {
 }
 
 span:active {
-    border: 1px dotted black;
+    outline: 1.5px dotted black;
 }
 
 input {
     color: black;
     background-color: white;
     border-top: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid black;
     border-bottom: 1px solid gainsboro;
-    border-left: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
 }
 
