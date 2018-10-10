@@ -25,12 +25,17 @@ button {
 }
 
 button:active {
-    outline-color: black;
+    border: 1px solid black;
 }
 
 span:active {
     outline: 1.5px dotted black;
 }
+
+button:focus, button:active {
+    outline: none;
+    box-shadow: none;
+ }
 
 input {
     color: black;
@@ -40,4 +45,9 @@ input {
     border-bottom: 1px solid gainsboro;
     border-right: 1px solid gainsboro;
 }
+
+input:focus, input:active {
+    outline: none;
+    box-shadow: none;
+ }
 
