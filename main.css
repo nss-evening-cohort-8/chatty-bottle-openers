@@ -1,5 +1,9 @@
+body {
+    font-family: sans-serif;
+}
+
 img {
-    height: 150px;
+    height: 125px;
     width: 100px;
 }
 
@@ -8,10 +12,47 @@ img {
 }
 
 #navbar {
-    background-color: rgb(185, 231, 247);
+    background-color: rgb(191, 184, 191);
 }
+
+button {
+    color: black;
+    background-color: rgb(191, 184, 191);
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-top: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+
 
 .msg-timestamp {
     font-size: .5em;
     padding: -1em;
 }
+
+button:active {
+    border: 1px solid black;
+}
+
+span:active {
+    outline: 1.5px dotted black;
+}
+
+button:focus, button:active {
+    outline: none;
+    box-shadow: none;
+ }
+
+input {
+    color: black;
+    background-color: white;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid gainsboro;
+    border-right: 1px solid gainsboro;
+}
+
+input:focus, input:active {
+    outline: none;
+    box-shadow: none;
+ }
