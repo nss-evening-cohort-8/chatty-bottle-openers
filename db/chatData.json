@@ -4,31 +4,31 @@
             "id": "message1",
             "username": "User1",
             "message": "Hello there!",
-            "timestamp": "Tue Oct 09 2018 18:54:44 GMT-0500"
+            "timestamp": ""
         },
         {
             "id": "message2",
             "username": "User2",
             "message": "How are you?",
-            "timestamp": "Tue Oct 09 2018 18:54:44 GMT-0500"
+            "timestamp": ""
         },
         {
             "id": "message3",
             "username": "User1",
             "message": "Not too good, to be honest.",
-            "timestamp": "Tue Oct 09 2018 18:54:44 GMT-0500"
+            "timestamp": ""
         },
         {
             "id": "message4",
             "username": "User2",
             "message": "Oh no! What's wrong??",
-            "timestamp": "Tue Oct 09 2018 18:54:44 GMT-0500"
+            "timestamp": ""
         },
         {
             "id": "message5",
             "username": "User3",
             "message": "Aw, don't worry about him! He's fine.",
-            "timestamp": "Tue Oct 09 2018 18:54:44 GMT-0500"
+            "timestamp": ""
         }
     ]
 }

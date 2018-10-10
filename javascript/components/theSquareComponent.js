@@ -1,6 +1,7 @@
 import {printToDom} from '../helpers/util.js';
 
 let chatData = [];
+let newChatData = [];
 
 const setChatData = (newArray) => {
     chatData = newArray;
@@ -18,8 +19,11 @@ const chatDataBuilder = (chatDataArray) => {
         domString +=        `<p class="msg-text">${message.message}</p>`;
         domString +=        `<p class="msg-timestamp">${message.timestamp}</p>`;
         domString += `</div>`;
+        
+        
     })
     printToDom(domString, 'theSquare');
 };
+
 
 export {chatDataBuilder, setChatData, getChatDataz};
