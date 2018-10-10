@@ -1,10 +1,5 @@
-@font-face {
-    font-family: gitmap;
-    src: url(./style/gitmapFont.ttf);
-}
-
 body {
-    font-family: gitmap;
+    font-family: sans-serif;
 }
 
 img {
