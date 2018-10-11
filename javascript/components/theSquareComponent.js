@@ -11,7 +11,7 @@ const deleteAll = () => {
 
 const clearButtonfunction = () => {
     const clearButton = document.getElementById(clearAll-button);
-    clearButton.addEventListener("click", deleteAll)
+    clearButton.addEventListener("click", deleteAll);
 };
 
 
