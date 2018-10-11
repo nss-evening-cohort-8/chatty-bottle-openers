@@ -1,5 +1,5 @@
 import {printToDom} from '../helpers/util.js';
-import {radiosEvent} from '../helpers/events';
+import {deleteThisMessage, radiosEvent} from '../helpers/events.js';
 
 let newChatData = [
     { 
@@ -20,7 +20,6 @@ const buildMessageObject = () => {
 }
     
 
-
 let chatData = [];
 
 const setChatData = (newArray) => {
@@ -35,19 +34,19 @@ const getChatDataz = () => {
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
     chatDataArray.forEach((message) => {
-        domString += `<div class="message">`;
-        domString +=        `<p class="msg-username">${message.username}</p>`;
-        domString +=        `<p class="msg-text">${message.message}</p>`;
-        domString +=        `<p class="msg-timestamp">${message.timestamp}</p>`;
+        domString += `<div id="${message.id} class="message container p-3">`;
+        domString +=    `<div class="container d-flex row">`;
+        domString +=        `<p class="msg">${message.username}:  ${message.message}</p>`;
+        domString +=        `<button type="button" class="delete-button btn btn-sm btn-danger ml-4">Delete</button>`;
+        domString +=        `<button type="button" class="btn btn-sm btn-warning ml-2">Edit</button>`;
+        domString +=     `</div>`;
+        domString +=        `<p class="msg-timestamp font-weight-light">${message.timestamp}</p>`;
         domString += `</div>`;
     })
     printToDom(domString, 'theSquare');
+    deleteThisMessage();
 };
 
 
-
 export {chatDataBuilder, setChatData, getChatDataz};
-
-
-
 
