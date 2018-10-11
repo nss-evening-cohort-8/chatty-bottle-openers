@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    background-color: teal;
 }
 
 img {
@@ -56,3 +57,43 @@ input:focus, input:active {
     outline: none;
     box-shadow: none;
  }
+
+ #theSquare {
+    border: 2px solid;
+    border-bottom-color: #535353;
+    border-right-color: #535353;
+    border-left-color: #dbdbdb;
+    border-top-color: #dbdbdb;
+    background-color: white;
+    font-size: 13px;
+    padding: 2px;
+ }
+
+ .content-container {
+    border: 2px solid;
+    border-bottom-color: #535353;
+    border-right-color: #535353;
+    border-left-color: #dbdbdb;
+    border-top-color: #dbdbdb;
+    background-color: #bfbfbf;
+    font-size: 13px;
+    padding: 2px;
+ }
+
+ .users {
+     height: 100%;
+ }
+
+ .chat-btn {
+    border: 2px solid;
+    border-bottom-color: #444;
+    border-right-color: #444;
+    border-left-color: #a6a6a6;
+    border-top-color: #a6a6a6;
+    background-color: #bfbfbf;
+    font-size: 10px;
+    line-height: 0;
+    padding: 1px;
+    height: 20px;
+    width: 40px;
+  }
