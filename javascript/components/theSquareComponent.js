@@ -1,5 +1,35 @@
 import {printToDom} from '../helpers/util.js';
-import {deleteThisMessage} from '../helpers/events.js';
+import {deleteThisMessage, selectedUser} from '../helpers/events.js';
+
+const textInput = document.getElementById("textInput");
+
+
+
+let newMessageArray = [];
+
+let newChatObject = 
+    { 
+    id: "0",
+    username: "",
+    message: "",
+    timestamp: ""
+    };
+
+const buildMessageArray = () => {
+    newMessageArray = []
+    if (selectedUser === "") {
+        alert("A user needs to be selected in order to add a message.")
+    } else {
+    const newId = parseFloat(newChatObject.id) + 1
+    const inputValue = textInput.value
+    newChatObject.id = newId;
+    newChatObject.username = selectedUser;
+    newChatObject.message = inputValue;
+    newMessageArray.push(newChatObject);
+    }
+}
+
+
 
 let chatData = [];
 
@@ -10,6 +40,7 @@ const setChatData = (newArray) => {
 const getChatDataz = () => {
     return chatData;
 };
+
 
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
@@ -28,4 +59,5 @@ const chatDataBuilder = (chatDataArray) => {
 };
 
 
-export {chatDataBuilder, setChatData, getChatDataz};
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray};
+
