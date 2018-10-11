@@ -1,10 +1,26 @@
+import {buildMessageArray, chatDataBuilder, textInput, newMessageArray} from '../components/theSquareComponent.js'
 
-const hoverButtonEvent = (buttonId) => {
-    const button = document.getElementById(buttonId);
-    button.addEventListener("hover", () => {
-        
-    })
-}
+let selectedUser = '';
+
+const radiosEvent = () => {
+    const radios = document.getElementsByClassName("radio");
+    for (let i = 0; i < radios.length; i++) {
+        radios[i].onclick = () => {
+           selectedUser = radios[i].value
+        }
+    }
+};
+
+const createMessageEvent = () => {
+  textInput.addEventListener('keyup', (e) => {
+      if (e.keyCode === 13) {
+          buildMessageArray();
+          chatDataBuilder(newMessageArray);
+          textInput.value = '';
+      }
+  })
+};  
+
 
 const deleteThisMessage = () => {
     const deleteButtons = document.getElementsByClassName('delete-button');
@@ -35,5 +51,4 @@ const deleteThisMessage = () => {
 //     });
 // }
 
-export {deleteThisMessage, largeFontEvent};
-
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent};
