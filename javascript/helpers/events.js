@@ -34,21 +34,11 @@ const deleteThisMessage = () => {
     }
   };
 
-  const largeFontEvent = () => {
-        const checkBox = document.getElementById('customCheck2');
-        if (checkBox.checked == true) {
-            document.getElementById('theSquare').style.fontSize = "40px";
-        } else {
-            document.getElementById('theSquare').style.fontSize = "16px";
-        }
-    }
-
-
-// const largeFontEvent = () => {
-//     const checkBox = document.getElementById('customCheck2');
-//     checkBox.addEventListener('click', () => {
-//         document.getElementById('theSquare').style.fontSize = "40px";
-//     });
-// }
+const largeFontEvent = () => {
+    const checkBox = document.getElementById('customCheck2');
+    checkBox.addEventListener('click', () => {
+        document.getElementById('theSquare').classList.toggle('giant-size')
+    });
+}
 
 export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent};
