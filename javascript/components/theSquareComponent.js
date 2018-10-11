@@ -1,24 +1,37 @@
 import {printToDom} from '../helpers/util.js';
-import {deleteThisMessage, radiosEvent} from '../helpers/events.js';
+import {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent} from '../helpers/events.js';
 
-let newChatData = [
+const textInput = document.getElementById("textInput");
+
+
+
+let newMessageArray = [];
+
+let newChatObject = 
     { 
-    id: "",
+    id: "0",
     username: "",
     message: "",
     timestamp: ""
-    }
-];
-
-let counter = 6
-const inputValue = document.getElementById("input").value
+    };
 
 const buildMessageObject = () => {
-    newChatData.id += `message${counter}`
-    newChatData.username += 
-    newChatData.message += document.getElementById.value;
+    newMessageArray = []
+    if (selectedUser === "") {
+        alert("A user needs to be selected in order to add a message.")
+    } else {
+    const newId = parseFloat(newChatObject.id) + 1
+    const inputValue = textInput.value
+    newChatObject.id = newId;
+    newChatObject.username = selectedUser;
+    newChatObject.message = inputValue;
+    newMessageArray.push(newChatObject);
+    chatDataBuilder(newMessageArray);
+    textInput.value = '';
+    }
 }
-    
+
+
 
 let chatData = [];
 
@@ -34,7 +47,7 @@ const getChatDataz = () => {
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
     chatDataArray.forEach((message) => {
-        domString += `<div id="${message.id} class="message container p-3">`;
+        domString += `<div id="${message.id}" class="message container p-3">`;
         domString +=    `<div class="container d-flex row">`;
         domString +=        `<p class="msg">${message.username}:  ${message.message}</p>`;
         domString +=        `<button type="button" class="delete-button btn btn-sm btn-danger ml-4">Delete</button>`;
@@ -48,5 +61,5 @@ const chatDataBuilder = (chatDataArray) => {
 };
 
 
-export {chatDataBuilder, setChatData, getChatDataz};
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageObject};
 

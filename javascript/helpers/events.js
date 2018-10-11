@@ -1,3 +1,5 @@
+import {buildMessageObject} from '../components/theSquareComponent.js'
+
 let selectedUser = '';
 
 const radiosEvent = () => {
@@ -5,9 +7,18 @@ const radiosEvent = () => {
     for (let i = 0; i < radios.length; i++) {
         radios[i].onclick = () => {
            selectedUser = radios[i].value;
+           console.log(selectedUser);
         }
     }
 };
+
+const createMessageEvent = () => {
+  textInput.addEventListener('keyup', (e) => {
+      if (e.keyCode === 13) {
+          buildMessageObject();
+      }
+  })
+};  
 
 
 const deleteThisMessage = () => {
@@ -23,5 +34,5 @@ const deleteThisMessage = () => {
   };
 
 
-export {deleteThisMessage, radiosEvent};
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent};
 
