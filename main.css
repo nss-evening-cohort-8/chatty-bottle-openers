@@ -24,6 +24,12 @@ button {
     border-right: 1px solid gainsboro;
 }
 
+
+.msg-timestamp {
+    font-size: .5em;
+    padding: -1em;
+}
+
 button:active {
     border: 1px solid black;
 }
@@ -50,4 +56,3 @@ input:focus, input:active {
     outline: none;
     box-shadow: none;
  }
-
