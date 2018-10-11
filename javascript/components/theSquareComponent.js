@@ -1,5 +1,5 @@
 import {printToDom} from '../helpers/util.js';
-import {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent} from '../helpers/events.js';
+import {deleteThisMessage, selectedUser} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
 
@@ -15,7 +15,7 @@ let newChatObject =
     timestamp: ""
     };
 
-const buildMessageObject = () => {
+const buildMessageArray = () => {
     newMessageArray = []
     if (selectedUser === "") {
         alert("A user needs to be selected in order to add a message.")
@@ -26,8 +26,6 @@ const buildMessageObject = () => {
     newChatObject.username = selectedUser;
     newChatObject.message = inputValue;
     newMessageArray.push(newChatObject);
-    chatDataBuilder(newMessageArray);
-    textInput.value = '';
     }
 }
 
@@ -61,5 +59,5 @@ const chatDataBuilder = (chatDataArray) => {
 };
 
 
-export {chatDataBuilder, setChatData, getChatDataz, buildMessageObject};
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray};
 

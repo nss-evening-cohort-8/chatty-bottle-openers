@@ -1,4 +1,4 @@
-import {buildMessageObject} from '../components/theSquareComponent.js'
+import {buildMessageArray, chatDataBuilder, textInput, newMessageArray} from '../components/theSquareComponent.js'
 
 let selectedUser = '';
 
@@ -6,8 +6,7 @@ const radiosEvent = () => {
     const radios = document.getElementsByClassName("radio");
     for (let i = 0; i < radios.length; i++) {
         radios[i].onclick = () => {
-           selectedUser = radios[i].value;
-           console.log(selectedUser);
+           selectedUser = radios[i].value
         }
     }
 };
@@ -15,7 +14,9 @@ const radiosEvent = () => {
 const createMessageEvent = () => {
   textInput.addEventListener('keyup', (e) => {
       if (e.keyCode === 13) {
-          buildMessageObject();
+          buildMessageArray();
+          chatDataBuilder(newMessageArray);
+          textInput.value = '';
       }
   })
 };  
