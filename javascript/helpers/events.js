@@ -1,11 +1,3 @@
-
-const hoverButtonEvent = (buttonId) => {
-    const button = document.getElementById(buttonId);
-    button.addEventListener("hover", () => {
-        
-    })
-}
-
 const deleteThisMessage = () => {
     const deleteButtons = document.getElementsByClassName('delete-button');
     for (let i = 0; i < deleteButtons.length; i++) {
@@ -17,6 +9,5 @@ const deleteThisMessage = () => {
       })
     }
   };
-
 
 export {deleteThisMessage};
