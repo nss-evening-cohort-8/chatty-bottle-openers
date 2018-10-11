@@ -5,3 +5,13 @@ const hoverButtonEvent = (buttonId) => {
         
     })
 }
+
+const clearButtonfunction = () => {
+    const clearButton = document.getElementById(clearAll-button);
+    clearButton.addEventListener("click", (e) => {
+
+    })
+};
+
+empty();
+

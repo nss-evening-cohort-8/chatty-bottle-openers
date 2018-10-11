@@ -1,6 +1,18 @@
 import {printToDom} from '../helpers/util.js';
+import {clearButtonFunction} from '../helpers'
 
 let chatData = [];
+let newChatData = [];
+
+const deleteAll = () => {
+    newChatData = []
+}
+
+const clearButtonfunction = () => {
+    const clearButton = document.getElementById(clearAll-button);
+    clearButton.addEventListener("click", deleteAll)
+};
+
 
 const setChatData = (newArray) => {
     chatData = newArray;
