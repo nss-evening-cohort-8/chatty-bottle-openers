@@ -1,6 +1,16 @@
 import {printToDom} from '../helpers/util.js';
 
-let newChatData = [];
+// // let newChatData = [];
+
+// const buildNewChatArray = () => {
+//     // const inputValue = document.getElementById("input").value
+//     const radios = document.getElementsByTagName('input');
+//     for(let i = 0; i < radios.length; i++) {
+//         if (radios[i].type === 'radio' && radios[i].checked){
+//             console.log(radios[i].id);
+//     }
+// }};
+
 
 let chatData = [];
 
@@ -12,18 +22,6 @@ const getChatDataz = () => {
     return chatData;
 };
 
-const buildNewChatArray = () => {
-    const inputValue = document.getElementById("input").value
-    const radios = document.getElementsByClassName("radio")
-    for(let i = 0; i < radios.length; i++) {
-        if (radio[i].checked){
-            console.log(radio[i].value)
-        // var selector = 'label[for=' + radios[i].id + ']';
-        // var label = document.querySelector(selector);
-        // const username = label.innerHTML;
-        // return username
-    }
-}
 
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
@@ -38,4 +36,7 @@ const chatDataBuilder = (chatDataArray) => {
 };
 
 
+
 export {chatDataBuilder, setChatData, getChatDataz};
+
+
