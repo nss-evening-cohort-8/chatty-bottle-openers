@@ -1,5 +1,6 @@
 import {printToDom} from '../helpers/util.js';
 import {clearButtonFunction} from '../helpers'
+import {deleteThisMessage} from '../helpers/events.js';
 
 let chatData = [];
 let newChatData = [];
@@ -25,15 +26,18 @@ const getChatDataz = () => {
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
     chatDataArray.forEach((message) => {
-        domString += `<div class="message container p-3">`;
+        domString += `<div id="${message.id} class="message container p-3">`;
         domString +=    `<div class="container d-flex row">`;
-        domString +=        `<p class="msg-username">${message.username}: </p>`;
-        domString +=        `<p class="msg-text border rounded bg-primary p-1 ml-2 text-white">${message.message}</p>`;
-        domString +=     `</div>`
-;        domString +=        `<p class="msg-timestamp font-weight-light">${message.timestamp}</p>`;
+        domString +=        `<p class="msg">${message.username}:  ${message.message}</p>`;
+        domString +=        `<button type="button" class="delete-button btn btn-sm btn-danger ml-4">Delete</button>`;
+        domString +=        `<button type="button" class="btn btn-sm btn-warning ml-2">Edit</button>`;
+        domString +=     `</div>`;
+        domString +=        `<p class="msg-timestamp font-weight-light">${message.timestamp}</p>`;
         domString += `</div>`;
     })
     printToDom(domString, 'theSquare');
+    deleteThisMessage();
 };
+
 
 export {chatDataBuilder, setChatData, getChatDataz};
