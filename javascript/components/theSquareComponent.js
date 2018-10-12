@@ -12,7 +12,7 @@ let newChatObject =
     id: "0",
     username: "",
     message: "",
-    timestamp: ""
+    timestamp: moment().format('MMMM Do YYYY, h:mm:ss a')
     };
 
 const buildMessageArray = () => {
@@ -35,7 +35,7 @@ let chatData = [];
 
 
 const deleteAll = () => {
-    newChatObject = []
+    newChatObject = [];
     chatData = [];
 }
 
