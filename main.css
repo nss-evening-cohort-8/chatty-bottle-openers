@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    background-color: teal;
 }
 
 img {
@@ -57,10 +58,69 @@ input:focus, input:active {
     box-shadow: none;
  }
 
+ #theSquare {
+    border: 2px solid;
+    border-bottom-color: #535353;
+    border-right-color: #535353;
+    border-left-color: #dbdbdb;
+    border-top-color: #dbdbdb;
+    background-color: white;
+    padding: 2px;
+    display: flex;
+    flex-direction: column-reverse;
+ }
+
+ .content-container {
+    border: 2px solid;
+    border-bottom-color: #535353;
+    border-right-color: #535353;
+    border-left-color: #dbdbdb;
+    border-top-color: #dbdbdb;
+    background-color: #bfbfbf;
+    padding: 2px;
+ }
+
+ .users {
+     height: 100%;
+ }
+
+ .chat-btn {
+    border: 2px solid;
+    border-bottom-color: #444;
+    border-right-color: #444;
+    border-left-color: #a6a6a6;
+    border-top-color: #a6a6a6;
+    background-color: #bfbfbf;
+    font-size: 10px;
+    line-height: 0;
+    padding: 1px;
+    height: 20px;
+    width: 40px;
+  }
+
  .giant-size {
      font-size: 40px;
  }
 
- #modal {
-     margin: 10px;
+ .section-header {
+    background-color: navy;
+    padding: 2px 4px 3px 4px;
+    position: relative;
+    border: 2px solid;
+    border-bottom-color: #a6a6a6;
+    border-right-color: #444;
+    border-left-color: #a6a6a6;
+    border-top-color: #a6a6a6;
  }
+
+.section-header > h2 {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#modal {
+    margin: 10px;
+}

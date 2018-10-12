@@ -37,7 +37,7 @@ const deleteThisMessage = () => {
 const largeFontEvent = () => {
     const checkBox = document.getElementById('customCheck2');
     checkBox.addEventListener('click', () => {
-        document.getElementById('theSquare').classList.toggle('giant-size')
+        document.getElementById('theSquare').classList.toggle('giant-size');
     });
 }
 
