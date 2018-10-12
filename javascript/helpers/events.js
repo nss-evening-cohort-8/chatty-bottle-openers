@@ -21,6 +21,13 @@ const createMessageEvent = () => {
   })
 };  
 
+const hoverButtonEvent = (buttonId) => {
+    const button = document.getElementById(buttonId);
+    button.addEventListener("hover", () => {
+        
+    });
+};
+
 
 const deleteThisMessage = () => {
     const deleteButtons = document.getElementsByClassName('delete-button');
@@ -47,3 +54,4 @@ changeBackgroundEvent = () => {
 }
 
 export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent};
+
