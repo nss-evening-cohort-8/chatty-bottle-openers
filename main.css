@@ -13,16 +13,23 @@ img {
 }
 
 #navbar {
-    background-color: rgb(191, 184, 191);
+    border: 3px solid;
+    border-bottom-color: #535353;
+    border-right-color: #535353;
+    border-left-color: #dbdbdb;
+    border-top-color: #dbdbdb;
+    background-color: #bfbfbf;
+    padding: 2px;
 }
 
 button {
-    color: black;
-    background-color: rgb(191, 184, 191);
     border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-top: 1px solid gainsboro;
-    border-right: 1px solid gainsboro;
+    border: 2px solid;
+    border-bottom-color: #444;
+    border-right-color: #444;
+    border-left-color: gainsboro;
+    border-top-color:  gainsboro;
+    background-color: #bfbfbf;
 }
 
 
@@ -95,7 +102,7 @@ input:focus, input:active {
     line-height: 0;
     padding: 1px;
     height: 20px;
-    width: 40px;
+    width: 45px;
   }
 
  .giant-size {
