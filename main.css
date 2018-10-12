@@ -66,6 +66,8 @@ input:focus, input:active {
     border-top-color: #dbdbdb;
     background-color: white;
     padding: 2px;
+    display: flex;
+    flex-direction: column-reverse;
  }
 
  .content-container {
@@ -98,5 +100,25 @@ input:focus, input:active {
 
  .giant-size {
      font-size: 40px;
- };
+ }
+
+ .section-header {
+    background-color: navy;
+    padding: 2px 4px 3px 4px;
+    position: relative;
+    border: 2px solid;
+    border-bottom-color: #a6a6a6;
+    border-right-color: #444;
+    border-left-color: #a6a6a6;
+    border-top-color: #a6a6a6;
+ }
+
+.section-header > h2 {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 

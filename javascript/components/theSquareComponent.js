@@ -50,8 +50,8 @@ const chatDataBuilder = (chatDataArray) => {
         domString +=        `<p class="msg">${message.username}:  ${message.message}</p>`;
         domString +=        `<button type="button" class="chat-btn delete-button ml-2">Delete</button>`;
         domString +=        `<button type="button" class="chat-btn edit-button ml-2">Edit</button>`;
+        domString +=        `<p class="msg-timestamp ml-4 font-weight-light">${message.timestamp}</p>`;
         domString +=     `</div>`;
-        domString +=        `<p class="msg-timestamp font-weight-light">${message.timestamp}</p>`;
         domString += `</div>`;
     })
     printToDom(domString, 'theSquare');
