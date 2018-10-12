@@ -12,7 +12,7 @@ let newChatObject =
     id: "0",
     username: "",
     message: "",
-    timestamp: ""
+    timestamp: moment().format('MMMM Do YYYY, h:mm:ss a')
     };
 
 const buildMessageArray = () => {
@@ -32,6 +32,18 @@ const buildMessageArray = () => {
 
 
 let chatData = [];
+
+
+const deleteAll = () => {
+    newChatObject = [];
+    chatData = [];
+}
+
+const clearButtonfunction = () => {
+    const clearButton = document.getElementById(clearAll-button);
+    clearButton.addEventListener("click", deleteAll);
+};
+
 
 const setChatData = (newArray) => {
     chatData = newArray;
@@ -60,4 +72,3 @@ const chatDataBuilder = (chatDataArray) => {
 
 
 export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray};
-
