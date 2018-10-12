@@ -41,7 +41,5 @@ const deleteThisMessage = () => {
     }
   };
 
-
-export {deleteThisMessage};
 export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent};
 

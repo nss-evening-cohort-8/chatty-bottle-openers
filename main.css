@@ -56,3 +56,7 @@ input:focus, input:active {
     outline: none;
     box-shadow: none;
  }
+
+ .giant-size {
+     font-size: 40px;
+ }

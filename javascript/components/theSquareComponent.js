@@ -1,6 +1,4 @@
 import {printToDom} from '../helpers/util.js';
-import {clearButtonFunction} from '../helpers'
-import {deleteThisMessage} from '../helpers/events.js';
 import {deleteThisMessage, selectedUser} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
@@ -34,10 +32,11 @@ const buildMessageArray = () => {
 
 
 let chatData = [];
-let newChatData = [];
+
 
 const deleteAll = () => {
-    newChatData = []
+    newChatObject = []
+    chatData = [];
 }
 
 const clearButtonfunction = () => {
@@ -73,4 +72,3 @@ const chatDataBuilder = (chatDataArray) => {
 
 
 export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray};
-
