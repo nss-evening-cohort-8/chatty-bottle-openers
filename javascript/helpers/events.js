@@ -41,4 +41,9 @@ const largeFontEvent = () => {
     });
 }
 
+changeBackgroundEvent = () => {
+    const colorBtn = document.getElementById('changeColorBtn');
+    colorBtn.addEventListener('click', )
+}
+
 export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent};

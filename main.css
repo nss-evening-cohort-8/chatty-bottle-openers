@@ -60,3 +60,7 @@ input:focus, input:active {
  .giant-size {
      font-size: 40px;
  }
+
+ #modal {
+     margin: 10px;
+ }
