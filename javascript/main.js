@@ -1,10 +1,11 @@
 import {getChatData} from './data/chatData.js';
-import {radiosEvent, createMessageEvent, largeFontEvent} from './helpers/events.js'
+import {radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent} from './helpers/events.js'
 
 const initializeApp = () => {
     getChatData();
     createMessageEvent();
     radiosEvent();
     largeFontEvent();
+    hideAlertEvent();
 }
 initializeApp();

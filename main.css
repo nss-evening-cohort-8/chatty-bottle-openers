@@ -3,13 +3,32 @@ body {
     background-color: teal;
 }
 
-img {
+.datBoi {
     height: 125px;
     width: 100px;
 }
 
+.img {
+    height: 50px;
+    width: 50px;
+}
+
+.sentence {
+    margin-top: 40px;
+}
+
 #checkboxes {
     margin-left: 120px;
+}
+
+#alert {
+    position: absolute;
+    z-index: 999999;
+    margin-left: 300px;
+}
+
+#users {
+    padding: 10px;
 }
 
 #navbar {
@@ -20,6 +39,14 @@ img {
     border-top-color: #dbdbdb;
     background-color: #bfbfbf;
     padding: 2px;
+}
+
+.button {
+    margin-left: 20px;
+}
+
+.ok {
+    margin-left: 180px;
 }
 
 button {
@@ -77,7 +104,7 @@ input:focus, input:active {
     flex-direction: column-reverse;
  }
 
- .content-container {
+ .content-container, .alertMessage {
     border: 2px solid;
     border-bottom-color: #535353;
     border-right-color: #535353;
@@ -109,7 +136,7 @@ input:focus, input:active {
      font-size: 40px;
  }
 
- .section-header {
+ .section-header, .alertHead {
     background-color: navy;
     padding: 2px 4px 3px 4px;
     position: relative;
@@ -118,6 +145,7 @@ input:focus, input:active {
     border-right-color: #444;
     border-left-color: #a6a6a6;
     border-top-color: #a6a6a6;
+    color: white;
  }
 
 .section-header > h2 {
