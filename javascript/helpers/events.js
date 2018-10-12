@@ -34,6 +34,11 @@ const deleteThisMessage = () => {
     }
   };
 
+const largeFontEvent = () => {
+    const checkBox = document.getElementById('customCheck2');
+    checkBox.addEventListener('click', () => {
+        document.getElementById('theSquare').classList.toggle('giant-size')
+    });
+}
 
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent};
-
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent};
