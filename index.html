@@ -14,7 +14,7 @@
             <a href="https://www.youtube.com/watch?v=CU5ByOf9eP0">
             <img class="m-2" src="./images/whaddupBoi.png" alt="whaddup boi">
             </a>
-            <input class="mr-sm-2 w-75 ml-1" type="text" placeholder=" Enter Message">
+            <input id="textInput" class="mr-sm-2 w-75 ml-1" type="text" placeholder=" Enter Message">
             <button class="mr-2">
               <span>&nbsp;Clear Message Board&nbsp;</span>
             </button>
@@ -32,31 +32,35 @@
         </div>
     </nav>
 
-    <div class="container main-content d-flex row pt-2">
-        <div class="users p-3 col-2">
-            <h3>Users:</h3>
-            <div id="users">
+    <div class="d-flex row p-4">
+            <div class="p-3 col-2">
+                    <div class="section-header">
+                        <h2 class="text-align-center">Users:</h2>
+                    </div>
+            <div id="users" class="content-container">
                 <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio1" name="radioDisabled" class="custom-control-input">
+                    <input type="radio" id="customRadio1" name="radioDisabled" class="radio custom-control-input" value="Jasmine Walters">
                     <label class="custom-control-label" for="customRadio1">Jasmine Walters</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio2" name="radioDisabled" class="custom-control-input">
+                    <input type="radio" id="customRadio2" name="radioDisabled" class="radio custom-control-input" value="Marshall Offutt">
                     <label class="custom-control-label" for="customRadio2">Marshall Offutt</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio3" name="radioDisabled" class="custom-control-input">
+                    <input type="radio" id="customRadio3" name="radioDisabled" class="radio custom-control-input" value="Mary Rys">
                     <label class="custom-control-label" for="customRadio3">Mary Rys</label>
                 </div>
                 <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio4" name="radioDisabled" class="custom-control-input">
+                    <input type="radio" id="customRadio4" name="radioDisabled" class="radio custom-control-input" value="Ryan Nelson">
                     <label class="custom-control-label" for="customRadio4">Ryan Nelson</label>
                 </div>
             </div>
         </div>
-        <div class="the-square p-3 col-10">
-            <h2 class="text-align-center">Messages:</h2>
-            <div id="theSquare" class="container border border-secondary"></div>
+        <div class="the-square p-3 ml-4 col-9">
+            <div class="section-header">
+                <h2 class="text-align-center">Messages:</h2>
+            </div>
+            <div id="theSquare" class="square-container"></div>
         </div>
     </div>
 
