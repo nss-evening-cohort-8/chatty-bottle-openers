@@ -10,5 +10,6 @@ const initializeApp = () => {
     largeFontEvent();
     hideAlertEvent();
     highContrastEvent();
+    changeBackgroundEvent();
 }
 initializeApp();

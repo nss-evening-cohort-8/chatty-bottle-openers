@@ -54,10 +54,11 @@ const highContrastEvent = () => {
     });
 };
 
-// changeBackgroundEvent = () => {
-//     const colorBtn = document.getElementById('changeColorBtn');
-//     colorBtn.addEventListener('click', )
-// }
+changeBackgroundEvent = () => {
+    const colorBtn = document.getElementById('changeColorBtn');
+    colorBtn.addEventListener('click', () => {
+    })
+}
 
 const hideAlertEvent = () => {
 const okButton = document.getElementById('ok');
