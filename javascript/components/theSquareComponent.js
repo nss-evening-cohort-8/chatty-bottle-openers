@@ -1,5 +1,5 @@
 import {printToDom} from '../helpers/util.js';
-import {deleteThisMessage, selectedUser, clearButtonfunction} from '../helpers/events.js';
+import {deleteThisMessage, selectedUser, clearButtonfunction, editThisMessage} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
 const alert = document.getElementById("alert")
@@ -48,19 +48,20 @@ const getChatDataz = () => {
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
     chatDataArray.forEach((message) => {
-    domString += `<div id="${message.id}" class="message container">`;
-    domString +=    `<div class="container d-flex row pt-3 ml-3">`;
-    domString +=        `<p class="blue">${message.username}: </p>`;
-    domString +=        `<p class=" ml-1 msg"> ${message.message}</p>`;
-    domString +=        `<button type="button" class="chat-btn delete-button ml-2"><span>&nbsp;Delete&nbsp;</span></button>`;
-    domString +=        `<button type="button" class="chat-btn edit-button ml-2"><span>&nbsp;&nbsp;Edit&nbsp;&nbsp;</span></button>`;
-    domString +=        `<p class="msg-timestamp ml-4 font-weight-light">${moment().format('MMMM Do YYYY, h:mm:ss a')}</p>`;
-    domString +=    `</div>`;
-    domString += `</div>`;
-    })
+        domString += `<div id="${message.id}" class="message container">`;
+        domString +=    `<div class="container d-flex row pt-3 ml-3">`;
+        domString +=        `<p class="blue">${message.username}: </p>`;
+        domString +=        `<p class=" ml-1 msg"> ${message.message}</p>`;
+        domString +=        `<button type="button" class="chat-btn delete-button ml-2"><span>&nbsp;Delete&nbsp;</span></button>`;
+        domString +=        `<button type="button" class="chat-btn edit-button ml-2"><span>&nbsp;&nbsp;Edit&nbsp;&nbsp;</span></button>`;
+        domString +=        (message.timestamp === "") ? `<p class="msg-timestamp ml-4 font-weight-light">${moment().format('MMMM Do YYYY, h:mm:ss a')}</p>`: `<p class="msg-timestamp ml-4 font-weight-light">${message.timestamp}</p>` 
+        domString +=    `</div>`;
+        domString += `</div>`;
+    });
     printToDom(domString, 'theSquare');
     deleteThisMessage();
-    };
+    editThisMessage();
+};
 
 
 export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction};

@@ -2,33 +2,33 @@
     "chatMessages": [
         {
             "id": "message1",
-            "username": "Rocko",
-            "message": "Hello there!",
-            "timestamp": ""
+            "username": "Jasmine Walters",
+            "message": "dark mode looks sick!",
+            "timestamp": "October 13th 2018, 10:17:36 am"
         },
         {
             "id": "message2",
-            "username": "Jerry",
-            "message": "How are you?",
-            "timestamp": ""
+            "username": "Ryan Nelson",
+            "message": "Traffic bad?",
+            "timestamp": "October 13th 2018, 10:20:12 am"
         },
         {
             "id": "message3",
-            "username": "Rocko",
+            "username": "Marshall Offutt",
             "message": "Not too good, to be honest.",
-            "timestamp": ""
+            "timestamp": "October 13th 2018, 10:21:32 am"
         },
         {
             "id": "message4",
-            "username": "Jerry",
-            "message": "Oh no! What's wrong??",
-            "timestamp": ""
+            "username": "Mary Rhys",
+            "message": "Oh no!",
+            "timestamp": "October 13th 2018, 10:22:45 am"
         },
         {
             "id": "message5",
-            "username": "John",
-            "message": "Aw, don't worry about him! He's fine.",
-            "timestamp": ""
+            "username": "Jasmine Walters",
+            "message": "I actually figured it out!",
+            "timestamp": "October 13th 2018, 10:45:04 am"
         }
     ]
 }
