@@ -32,8 +32,24 @@ const buildMessageArray = () => {
 const hideAlert = () => {
     alert.style.display = 'none';
 }
+let chatBotMessage = []
+const chatBotFires = () => {
+    const messages = document.getElementsByClassName('msg');
+    for (let i = 0; i < messages.length; i++) {
+    if (messages[i].innerHTML === "whats on your mind Ed" ) {
+        chatBotMessage.push(chatBotArray[7])
+        chatDataBuilder(chatBotMessage);
+    }
+}}
+let chatbotData = [];
 
+const setChatbotData = (newArray) => {
+    chatbotData = newArray;
+};
 
+const getChatbotDataz = () => {
+    return chatbotData;
+};
 
 let chatData = [];
 
@@ -60,10 +76,11 @@ const chatDataBuilder = (chatDataArray) => {
         domString += `</div>`;
     });
     printToDom(domString, 'theSquare');
+    chatBotFires();
     deleteThisMessage();
     editThisMessage();
     messageLimit();
 };
 
 
-export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction};
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction, getChatbotDataz, setChatbotData, chatBotFires};
