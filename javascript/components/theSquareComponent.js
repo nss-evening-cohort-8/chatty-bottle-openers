@@ -64,8 +64,8 @@ const chatDataBuilder = (chatDataArray) => {
     domString +=    `<div class="container d-flex row pt-3 ml-3">`;
     domString +=        `<p class="blue">${message.username}: </p>`;
     domString +=        `<p class=" ml-1 msg"> ${message.message}</p>`;
-    domString +=        `<button type="button" class="chat-btn delete-button ml-2">Delete</button>`;
-    domString +=        `<button type="button" class="chat-btn edit-button ml-2">Edit</button>`;
+    domString +=        `<button type="button" class="chat-btn delete-button ml-2"><span>&nbsp;Delete&nbsp;</span></button>`;
+    domString +=        `<button type="button" class="chat-btn edit-button ml-2"><span>&nbsp;&nbsp;Edit&nbsp;&nbsp;</span></button>`;
     domString +=        `<p class="msg-timestamp ml-4 font-weight-light">${message.timestamp}</p>`;
     domString +=    `</div>`;
     domString += `</div>`;
