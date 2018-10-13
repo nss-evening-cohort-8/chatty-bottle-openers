@@ -2,31 +2,31 @@
     "chatMessages": [
         {
             "id": "message1",
-            "username": "User1",
+            "username": "Rocko",
             "message": "Hello there!",
             "timestamp": ""
         },
         {
             "id": "message2",
-            "username": "User2",
+            "username": "Jerry",
             "message": "How are you?",
             "timestamp": ""
         },
         {
             "id": "message3",
-            "username": "User1",
+            "username": "Rocko",
             "message": "Not too good, to be honest.",
             "timestamp": ""
         },
         {
             "id": "message4",
-            "username": "User2",
+            "username": "Jerry",
             "message": "Oh no! What's wrong??",
             "timestamp": ""
         },
         {
             "id": "message5",
-            "username": "User3",
+            "username": "John",
             "message": "Aw, don't worry about him! He's fine.",
             "timestamp": ""
         }
