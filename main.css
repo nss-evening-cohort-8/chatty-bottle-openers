@@ -3,26 +3,65 @@ body {
     background-color: teal;
 }
 
-img {
+.datBoi {
     height: 125px;
     width: 100px;
+}
+
+.img {
+    height: 50px;
+    width: 50px;
+}
+
+.sentence {
+    margin-top: 40px;
 }
 
 #checkboxes {
     margin-left: 120px;
 }
 
+#alert {
+    position: absolute;
+    z-index: 999999;
+    margin-left: 400px;
+    margin-top: 100px;
+}
+
+#users {
+    padding: 10px;
+}
+
 #navbar {
-    background-color: rgb(191, 184, 191);
+    border: 3px solid;
+    border-bottom-color: #535353;
+    border-right-color: #535353;
+    border-left-color: #dbdbdb;
+    border-top-color: #dbdbdb;
+    background-color: #bfbfbf;
+    padding: 2px;
+}
+
+#textInput {
+    width: 75%;
+}
+
+.button {
+    margin-left: 20px;
+}
+
+.ok {
+    margin-left: 180px;
 }
 
 button {
-    color: black;
-    background-color: rgb(191, 184, 191);
     border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-top: 1px solid gainsboro;
-    border-right: 1px solid gainsboro;
+    border: 2px solid;
+    border-bottom-color: #444;
+    border-right-color: #444;
+    border-left-color: gainsboro;
+    border-top-color:  gainsboro;
+    background-color: #bfbfbf;
 }
 
 
@@ -70,7 +109,7 @@ input:focus, input:active {
     flex-direction: column-reverse;
  }
 
- .content-container {
+ .content-container, .alertMessage {
     border: 2px solid;
     border-bottom-color: #535353;
     border-right-color: #535353;
@@ -95,14 +134,14 @@ input:focus, input:active {
     line-height: 0;
     padding: 1px;
     height: 20px;
-    width: 40px;
+    width: 45px;
   }
 
  .giant-size {
      font-size: 40px;
  }
 
- .section-header {
+ .section-header, .alertHead {
     background-color: navy;
     padding: 2px 4px 3px 4px;
     position: relative;
@@ -111,6 +150,7 @@ input:focus, input:active {
     border-right-color: #444;
     border-left-color: #a6a6a6;
     border-top-color: #a6a6a6;
+    color: white;
  }
 
 .section-header > h2 {

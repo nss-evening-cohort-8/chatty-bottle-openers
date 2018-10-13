@@ -59,4 +59,12 @@ const highContrastEvent = () => {
 //     colorBtn.addEventListener('click', )
 // }
 
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent};
+const hideAlertEvent = () => {
+const okButton = document.getElementById('ok');
+const alert = document.getElementById("alert");
+okButton.addEventListener('click', () => {
+    alert.style.display = 'none';
+})
+};
+
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent};

@@ -4,30 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chatty</title>
+    <title>Whaddup</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/png" href="images/frogIcon.png/">
 </head>
 <body id="body">
-    <nav class="navbar-expand-lg navbar-light" id="navbar">
+<div id="alert" class="alert fade show" role="alert">
+    <div class="alertHead">
+    <strong>Hold up!</strong>
+    </div>
+    <div class="alertMessage">
+        <div class="d-flex flex-wrap">
+        <img class="img mt-4" src="./images/alert.png">
+        <p class="sentence ml-2">You need to select a user before adding a message.</p>
+        </div> 
+        <button id="ok" class="ok mt-4 mb-2"><span>&nbsp;&nbsp;&nbsp;OK&nbsp;&nbsp;&nbsp;</span></button>  
+    </div>   
+</div>
+
+    <nav class="sticky-top navbar-expand-lg navbar-light" id="navbar">    
         <div class="collapse navbar-collapse">
             <a href="https://www.youtube.com/watch?v=CU5ByOf9eP0">
-            <img class="m-2" src="./images/whaddupBoi.png" alt="whaddup boi">
+            <img class="datBoi m-2" src="./images/whaddupBoi.png" alt="whaddup boi">
             </a>
-            <input id="textInput" class="mr-sm-2 w-75 ml-1" type="text" placeholder=" Enter Message">
+            <input id="textInput" class="mr-sm-2 ml-1" type="text" placeholder=" Enter Message">
             <button class="mr-2" id="clearAll-button">
               <span>&nbsp;Clear Message Board&nbsp;</span>
             </button>
-        </div>
-
+        </div> 
         <div class="d-flex" id="checkboxes">
           <div class="form-check mr-4">
-                <input class="form-check-input" type="checkbox" id="customCheck1"> <!--IDs need to remain this way in order for checkboxes to work-->
+                <input class="form-check-input" type="checkbox" id="customCheck1"> 
                 <label class="form-check-label" for="customCheck1">Dark Mode</label>
           </div>
           <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="customCheck2"> <!--IDs need to remain this way in order for checkboxes to work-->
-                <label class="form-check-label" for="customCheck2">GIANT text</label>
+                <input class="form-check-input" type="checkbox" id="customCheck2">
+                <label class="form-check-label" for="customCheck2">GIANT Text</label>
           </div>
           <button type="button" id="modal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Change Theme
@@ -41,21 +54,21 @@
                         <h2 class="text-align-center">Users:</h2>
                     </div>
             <div id="users" class="content-container">
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio1" name="radioDisabled" class="radio custom-control-input" value="Jasmine Walters">
-                    <label class="custom-control-label" for="customRadio1">Jasmine Walters</label>
+                <div class="form-radio">
+                    <input type="radio" id="customRadio1" name="radioDisabled" class="radio form-radio-input" value="Jasmine Walters">
+                    <label class="form-radio-label" for="customRadio1">Jasmine Walters</label>
                 </div>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio2" name="radioDisabled" class="radio custom-control-input" value="Marshall Offutt">
-                    <label class="custom-control-label" for="customRadio2">Marshall Offutt</label>
+                <div class="form-radio">
+                    <input type="radio" id="customRadio2" name="radioDisabled" class="radio form-radio-input" value="Marshall Offutt">
+                    <label class="form-radio-label" for="customRadio2">Marshall Offutt</label>
                 </div>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio3" name="radioDisabled" class="radio custom-control-input" value="Mary Rys">
-                    <label class="custom-control-label" for="customRadio3">Mary Rys</label>
+                <div class="form-radio">
+                    <input type="radio" id="customRadio3" name="radioDisabled" class="radio form-radio-input" value="Mary Rys">
+                    <label class="form-radio-label" for="customRadio3">Mary Rys</label>
                 </div>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio4" name="radioDisabled" class="radio custom-control-input" value="Ryan Nelson">
-                    <label class="custom-control-label" for="customRadio4">Ryan Nelson</label>
+                <div class="form-radio">
+                    <input type="radio" id="customRadio4" name="radioDisabled" class="radio form-radio-input" value="Ryan Nelson">
+                    <label class="form-radio-label" for="customRadio4">Ryan Nelson</label>
                 </div>
             </div>
         </div>
