@@ -2,6 +2,16 @@ import {buildMessageArray, chatDataBuilder, textInput, newMessageArray} from '..
 
 let selectedUser = '';
 
+const deleteAll = () => {
+    const messages = document.getElementById("theSquare")
+    messages.innerHTML = ""
+}
+
+const clearButtonfunction = () => {
+    const clearButton = document.getElementById("clearAll-button");
+    clearButton.addEventListener("click", deleteAll);
+};
+
 const radiosEvent = () => {
     const radios = document.getElementsByClassName("radio");
     for (let i = 0; i < radios.length; i++) {
@@ -62,6 +72,6 @@ okButton.addEventListener('click', () => {
 })
 };
 
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent};
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent, clearButtonfunction};
 
 
