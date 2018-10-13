@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +11,18 @@
     <link rel="shortcut icon" type="image/png" href="images/frogIcon.png/">
 </head>
 <body id="body">
-<div id="alert" class="alert fade show" role="alert">
-    <div class="alertHead">
-    <strong>Hold up!</strong>
+    <div id="alert" class="alert fade show" role="alert">
+        <div class="alertHead">
+        <strong>Hold up!</strong>
+        </div>
+        <div class="alertMessage">
+            <div class="d-flex flex-wrap">
+            <img class="img mt-4" src="./images/alert.png">
+            <p class="sentence ml-2">You need to select a user before adding a message.</p>
+            </div> 
+            <button id="ok" class="ok mt-4 mb-2"><span>&nbsp;&nbsp;&nbsp;OK&nbsp;&nbsp;&nbsp;</span></button>  
+        </div>   
     </div>
-    <div class="alertMessage">
-        <div class="d-flex flex-wrap">
-        <img class="img mt-4" src="./images/alert.png">
-        <p class="sentence ml-2">You need to select a user before adding a message.</p>
-        </div> 
-        <button id="ok" class="ok mt-4 mb-2"><span>&nbsp;&nbsp;&nbsp;OK&nbsp;&nbsp;&nbsp;</span></button>  
-    </div>   
-</div>
 
     <nav class="sticky-top navbar-expand-lg navbar-light" id="navbar">    
         <div class="collapse navbar-collapse">
@@ -42,33 +43,63 @@
                 <input class="form-check-input" type="checkbox" id="customCheck2">
                 <label class="form-check-label" for="customCheck2">GIANT Text</label>
           </div>
+          <!-- Button trigger modal -->
+            <button type="button" class="ml-3"data-toggle="modal" data-target="#exampleModalCenter">
+            Color Picker
+            </button>
         </div>
     </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Chose your own colors</h5>
+            <button type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div>
+                <input type="color" id="bodyColor" name="color"
+                        value="#f6b73c" />
+                <label for="body">Background</label>
+                <input type="color" id="colorWell" name="color"
+                        value="#f6b73c" />
+                <label for="body">Text</label>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <div id="main" class="d-flex row p-4">
             <div class="p-3 col-2">
                     <div id="head" class="section-header">
                         <h2 class="text-align-center">Users:</h2>
                     </div>
-            <div id="users" class="content-container">
-                <div class="form-radio">
-                    <input type="radio" id="customRadio1" name="radioDisabled" class="radio form-radio-input" value="Jasmine Walters">
-                    <label class="form-radio-label" for="customRadio1">Jasmine Walters</label>
+                    <div id="users" class="content-container">
+                        <div class="form-radio">
+                            <input type="radio" id="customRadio1" name="radioDisabled" class="radio form-radio-input" value="Jasmine Walters">
+                            <label class="form-radio-label" for="customRadio1">Jasmine Walters</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" id="customRadio2" name="radioDisabled" class="radio form-radio-input" value="Marshall Offutt">
+                            <label class="form-radio-label" for="customRadio2">Marshall Offutt</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" id="customRadio3" name="radioDisabled" class="radio form-radio-input" value="Mary Rys">
+                            <label class="form-radio-label" for="customRadio3">Mary Rys</label>
+                        </div>
+                        <div class="form-radio">
+                            <input type="radio" id="customRadio4" name="radioDisabled" class="radio form-radio-input" value="Ryan Nelson">
+                            <label class="form-radio-label" for="customRadio4">Ryan Nelson</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-radio">
-                    <input type="radio" id="customRadio2" name="radioDisabled" class="radio form-radio-input" value="Marshall Offutt">
-                    <label class="form-radio-label" for="customRadio2">Marshall Offutt</label>
-                </div>
-                <div class="form-radio">
-                    <input type="radio" id="customRadio3" name="radioDisabled" class="radio form-radio-input" value="Mary Rys">
-                    <label class="form-radio-label" for="customRadio3">Mary Rys</label>
-                </div>
-                <div class="form-radio">
-                    <input type="radio" id="customRadio4" name="radioDisabled" class="radio form-radio-input" value="Ryan Nelson">
-                    <label class="form-radio-label" for="customRadio4">Ryan Nelson</label>
-                </div>
-            </div>
-        </div>
         <div id="square" class="the-square p-3 ml-4 col-9">
             <div id="sqhead" class="section-header">
                 <h2 class="text-align-center">Messages:</h2>
@@ -76,7 +107,6 @@
             <div id="theSquare" class="square-container"></div>
         </div>
     </div>
-
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
