@@ -118,7 +118,16 @@ input:focus, input:active {
     color: white;
     font-size: 20px;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
 }
 
-
+.hcb {
+    background-color: black !important;
+    color: white !important;
+    border-color: lime !important;
+}
+    
+.blue {
+    color: blue;
+    font-weight: bold;
+}
