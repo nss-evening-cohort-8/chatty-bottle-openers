@@ -1,6 +1,9 @@
 import {buildMessageArray, chatDataBuilder, textInput, newMessageArray} from '../components/theSquareComponent.js'
 
 let selectedUser = '';
+let edit = 0;
+let messageIWantToChange;
+const input = document.getElementById('textInput');
 
 const deleteAll = () => {
     const messages = document.getElementById("theSquare")
@@ -45,6 +48,20 @@ const deleteThisMessage = () => {
 
 let messageIWantToChange;
 const input = document.getElementById('textInput');
+const eventHandeler = () => {
+    input.addEventListener('keyup', (e) => {
+        if (e.keyCode === 13) {
+    if (edit === 1) {
+        changeMessage();
+        edit = 0;
+        input.value = '';
+    }
+    else {
+        edit = 0;
+        createMessageEvent();
+        hideAlertEvent();
+    };
+    }})}
 
 const editThisMessage = () => {
     const editButtons = document.getElementsByClassName('edit-button');
@@ -53,18 +70,33 @@ const editThisMessage = () => {
             input.focus(); 
             messageIWantToChange = e.currentTarget.parentNode.childNodes[1];
             input.value = messageIWantToChange.innerHTML;
+            edit = 1;
         })
     };
 
 };
 
-const changeMessage = () => {
-    input.addEventListener('keyup', (e) => {
-        if (e.keyCode === 13) {
-            messageIWantToChange.innerHTML = input.value;
+const changeMessage = () => {       
+messageIWantToChange.innerHTML = input.value;
         };
-    });
-};
+
+const createMessageEvent = () => {
+          buildMessageArray();
+          chatDataBuilder(newMessageArray);
+          textInput.value = '';
+      };  
+
+const deleteThisMessage = () => {
+    const deleteButtons = document.getElementsByClassName('delete-button');
+    for (let i = 0; i < deleteButtons.length; i++) {
+      const element = deleteButtons[i];
+      element.addEventListener("click", (e) => {
+        const buttonIClicked = e.target;
+        const messageToDelete = buttonIClicked.parentNode.parentNode;
+        messageToDelete.remove();
+      });
+    };
+  };
 
 const largeFontEvent = () => {
     const checkBox = document.getElementById('customCheck2');
@@ -106,4 +138,4 @@ const messageLimit = () => {
     };
 };
 
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent, clearButtonfunction, editThisMessage, changeMessage, messageLimit};
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, clearButtonfunction, eventHandeler, editThisMessage, hideAlertEvent, messageLimit};

@@ -12,7 +12,9 @@
 > * Javascript
 > * Bootstrap 4
 
-### Screenshots 
+### Screenshot
+<img src="./images/screenshot.png">
+Full website of Chatty app.
 
 ### How to Run 
 ```
