@@ -1,4 +1,5 @@
 import {printToDom} from '../helpers/util.js';
+import {getChatBotData} from '../data/chatBot.js'
 import {deleteThisMessage, selectedUser, clearButtonfunction, editThisMessage, messageLimit} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
