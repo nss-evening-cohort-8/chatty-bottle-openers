@@ -38,12 +38,25 @@ const largeFontEvent = () => {
     checkBox.addEventListener('click', () => {
         document.getElementById('theSquare').classList.toggle('giant-size');
     });
-}
+};
+
+const highContrastEvent = () => {
+    const checkBox = document.getElementById('customCheck1');
+    checkBox.addEventListener('click', () => {
+    document.getElementById('body').classList.toggle('hcb');
+    document.getElementById('navbar').classList.toggle('hcb');
+    document.getElementById('main').classList.toggle('hcb');
+    document.getElementById('users').classList.toggle('hcb');
+    document.getElementById('theSquare').classList.toggle('hcb');
+    document.getElementById('head').classList.toggle('hcb');
+    document.getElementById('square').classList.toggle('hcb');
+    document.getElementById('sqhead').classList.toggle('hcb');
+    });
+};
 
 // changeBackgroundEvent = () => {
 //     const colorBtn = document.getElementById('changeColorBtn');
 //     colorBtn.addEventListener('click', )
 // }
 
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent};
-
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent};
