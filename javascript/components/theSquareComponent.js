@@ -1,5 +1,5 @@
 import {printToDom} from '../helpers/util.js';
-import {deleteThisMessage, selectedUser} from '../helpers/events.js';
+import {deleteThisMessage, selectedUser, clearButtonfunction} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
 const alert = document.getElementById("alert")
@@ -35,19 +35,6 @@ const hideAlert = () => {
 
 
 let chatData = [];
-let newChatData = [];
-
-
-const deleteAll = () => {
-    newChatObject = [];
-    chatData = [];
-}
-
-const clearButtonfunction = () => {
-    const clearButton = document.getElementById(clearAll-button);
-    clearButton.addEventListener("click", deleteAll);
-};
-
 
 const setChatData = (newArray) => {
     chatData = newArray;
@@ -76,4 +63,4 @@ const chatDataBuilder = (chatDataArray) => {
     };
 
 
-export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert};
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction};
