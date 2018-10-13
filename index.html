@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" type="image/png" href="images/frogIcon.png/">
 </head>
-<body>
+<body id="body">
 <div id="alert" class="alert fade show" role="alert">
     <div class="alertHead">
     <strong>Hold up!</strong>
@@ -20,8 +20,7 @@
         <p class="sentence ml-2">You need to select a user before adding a message.</p>
         </div> 
         <button id="ok" class="ok mt-4 mb-2"><span>&nbsp;&nbsp;&nbsp;OK&nbsp;&nbsp;&nbsp;</span></button>  
-    </div>
-    
+    </div>   
 </div>
 
     <nav class="sticky-top navbar-expand-lg navbar-light" id="navbar">    
@@ -46,9 +45,9 @@
         </div>
     </nav>
 
-    <div class="d-flex row p-4">
+    <div id="main" class="d-flex row p-4">
             <div class="p-3 col-2">
-                    <div class="section-header">
+                    <div id="head" class="section-header">
                         <h2 class="text-align-center">Users:</h2>
                     </div>
             <div id="users" class="content-container">
@@ -70,8 +69,8 @@
                 </div>
             </div>
         </div>
-        <div class="the-square p-3 ml-4 col-9">
-            <div class="section-header">
+        <div id="square" class="the-square p-3 ml-4 col-9">
+            <div id="sqhead" class="section-header">
                 <h2 class="text-align-center">Messages:</h2>
             </div>
             <div id="theSquare" class="square-container"></div>

@@ -1,6 +1,6 @@
 import {getChatData} from './data/chatData.js';
-import {radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent} from './helpers/events.js'
 import {hideAlert} from './components/theSquareComponent.js'
+import {radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, hideAlertEvent} from './helpers/events.js'
 
 const initializeApp = () => {
     hideAlert();
@@ -9,5 +9,6 @@ const initializeApp = () => {
     radiosEvent();
     largeFontEvent();
     hideAlertEvent();
+    highContrastEvent();
 }
 initializeApp();
