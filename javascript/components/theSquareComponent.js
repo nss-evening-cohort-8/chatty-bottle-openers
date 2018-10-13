@@ -1,5 +1,5 @@
 import {printToDom} from '../helpers/util.js';
-import {deleteThisMessage, selectedUser, clearButtonfunction, editThisMessage, editCondition} from '../helpers/events.js';
+import {deleteThisMessage, selectedUser, clearButtonfunction, editThisMessage} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
 const alert = document.getElementById("alert")
@@ -59,7 +59,6 @@ const chatDataBuilder = (chatDataArray) => {
         domString += `</div>`;
     });
     printToDom(domString, 'theSquare');
-    editCondition();
     deleteThisMessage();
     editThisMessage();
 };

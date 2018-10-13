@@ -1,6 +1,9 @@
 import {buildMessageArray, chatDataBuilder, textInput, newMessageArray} from '../components/theSquareComponent.js'
 
 let selectedUser = '';
+let edit = 0;
+let messageIWantToChange;
+const input = document.getElementById('textInput');
 
 const deleteAll = () => {
     const messages = document.getElementById("theSquare")
@@ -21,15 +24,44 @@ const radiosEvent = () => {
     }
 };
 
+const eventHandeler = () => {
+    input.addEventListener('keyup', (e) => {
+        if (e.keyCode === 13) {
+    if (edit === 1) {
+        changeMessage();
+        edit = 0;
+        input.value = '';
+    }
+    else {
+        edit = 0;
+        createMessageEvent();
+        hideAlertEvent();
+    }
+    }})}
+
+const editThisMessage = () => {
+    const editButtons = document.getElementsByClassName('edit-button');
+    for (let i = 0; i < editButtons.length; i++) {
+        editButtons[i].addEventListener("click", (e) => {
+        input.focus(); 
+        messageIWantToChange = e.currentTarget.parentNode.childNodes[1];
+        input.value = messageIWantToChange.innerHTML;
+        edit = 1;
+        })
+    };
+
+};
+
+const changeMessage = () => {       
+messageIWantToChange.innerHTML = input.value;
+        };
+
+
 const createMessageEvent = () => {
-  textInput.addEventListener('keyup', (e) => {
-      if (e.keyCode === 13) {
           buildMessageArray();
           chatDataBuilder(newMessageArray);
           textInput.value = '';
-      }
-  })
-};  
+      }  
 
 const deleteThisMessage = () => {
     const deleteButtons = document.getElementsByClassName('delete-button');
@@ -42,30 +74,6 @@ const deleteThisMessage = () => {
       })
     }
   };
-
-let messageIWantToChange;
-const input = document.getElementById('textInput');
-
-const editThisMessage = () => {
-    const editButtons = document.getElementsByClassName('edit-button');
-    for (let i = 0; i < editButtons.length; i++) {
-        editButtons[i].addEventListener("click", (e) => {
-        input.focus(); 
-        messageIWantToChange = e.currentTarget.parentNode.childNodes[1];
-        input.value = messageIWantToChange.innerHTML;
-        })
-    };
-
-};
-
-const changeMessage = () => {
-    input.addEventListener('keyup', (e) => {
-        if (e.keyCode === 13) {
-            messageIWantToChange.innerHTML = input.value;
-        };
-    });
-};
-
 
 const largeFontEvent = () => {
     const checkBox = document.getElementById('customCheck2');
@@ -96,29 +104,7 @@ okButton.addEventListener('click', () => {
 })
 };
 
-let edit = 0
-
-const editCondition = () => {
-    edit = 0;
-    const editButtons = document.getElementsByClassName('edit-button');
-    for (let i = 0; i < editButtons.length; i++) {
-    editButtons[i].addEventListener("click", () => {
-    edit = 1;
-    })}
-};
-
-
-const eventHandeler = () => {
-    if (edit === 1) {
-        changeMessage();
-    }
-    if (edit === 0) {
-        createMessageEvent();
-        hideAlertEvent();
-    }
-}
-
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, clearButtonfunction, editCondition, eventHandeler, editThisMessage};
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, clearButtonfunction, eventHandeler, editThisMessage};
 
 
 
