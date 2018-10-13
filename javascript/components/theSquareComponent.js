@@ -12,7 +12,7 @@ let newChatObject =
     id: "0",
     username: "",
     message: "",
-    timestamp: moment().format('MMMM Do YYYY, h:mm:ss a')
+    timestamp: ""
     };
 
 const buildMessageArray = () => {
@@ -63,7 +63,7 @@ const chatDataBuilder = (chatDataArray) => {
     domString +=        `<p class=" ml-1 msg"> ${message.message}</p>`;
     domString +=        `<button type="button" class="chat-btn delete-button ml-2">Delete</button>`;
     domString +=        `<button type="button" class="chat-btn edit-button ml-2">Edit</button>`;
-    domString +=        `<p class="msg-timestamp ml-4 font-weight-light">${message.timestamp}</p>`;
+    domString +=        `<p class="msg-timestamp ml-4 font-weight-light">${moment().format('MMMM Do YYYY, h:mm:ss a')}</p>`;
     domString +=    `</div>`;
     domString += `</div>`;
     })
