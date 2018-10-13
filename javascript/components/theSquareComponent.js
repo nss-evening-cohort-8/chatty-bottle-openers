@@ -32,8 +32,6 @@ const hideAlert = () => {
     alert.style.display = 'none';
 }
 
-
-
 let chatData = [];
 
 const setChatData = (newArray) => {
@@ -43,7 +41,6 @@ const setChatData = (newArray) => {
 const getChatDataz = () => {
     return chatData;
 };
-
 
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
@@ -63,6 +60,5 @@ const chatDataBuilder = (chatDataArray) => {
     editThisMessage();
     messageLimit();
 };
-
 
 export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction};
