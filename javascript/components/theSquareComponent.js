@@ -14,7 +14,7 @@ let newChatObject =
     timestamp: ""
     };
 
-alert.style.display = 'none';
+
 
 const buildMessageArray = () => {
     newMessageArray = []
@@ -28,6 +28,10 @@ const buildMessageArray = () => {
     newChatObject.message = inputValue;
     newMessageArray.push(newChatObject);
     }
+}
+
+const hideAlert = () => {
+    alert.style.display = 'none';
 }
 
 
@@ -72,4 +76,4 @@ const chatDataBuilder = (chatDataArray) => {
 };
 
 
-export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray};
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert};
