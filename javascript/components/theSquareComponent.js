@@ -62,9 +62,9 @@ const getChatDataz = () => {
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
     chatDataArray.forEach((message) => {
-        domString += `<div id="${message.id} class="message container p-4">`;
+        domString += `<div id="${message.id}" class="message container">`;
         domString +=    `<div class="container d-flex row pt-3 ml-3">`;
-        domString +=        `<p class="msg">${message.username}:  ${message.message}</p>`;
+        domString +=        `<p class="msg"><strong>${message.username}:</strong>  ${message.message}</p>`;
         domString +=        `<button type="button" class="chat-btn delete-button ml-2"><span>&nbsp;Delete&nbsp;</span></button>`;
         domString +=        `<button type="button" class="chat-btn edit-button ml-2"><span>&nbsp;&nbsp;Edit&nbsp;&nbsp;</span></button>`;
         domString +=        `<p class="msg-timestamp ml-4 font-weight-light">${message.timestamp}</p>`;
