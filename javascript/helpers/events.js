@@ -96,10 +96,4 @@ okButton.addEventListener('click', () => {
 })
 };
 
-<<<<<<< HEAD
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent, clearButtonfunction};
-=======
 export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent, clearButtonfunction, editThisMessage, changeMessage};
-
-
->>>>>>> master
