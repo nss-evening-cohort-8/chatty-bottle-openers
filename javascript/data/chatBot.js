@@ -8,7 +8,7 @@ function executeThisCodeAfterFileLoaded () {
     console.log('shit broke');
   }
   
-  const getChatData = () => {
+  const getChatBotData = () => {
     let myRequest = new XMLHttpRequest();
     myRequest.addEventListener('load', executeThisCodeAfterFileLoaded);
     myRequest.addEventListener('error', executeThisCodeIfXhrFails);
@@ -16,4 +16,4 @@ function executeThisCodeAfterFileLoaded () {
     myRequest.send();
   };
   
-  export {getChatData};
+  export {getChatBotData};
