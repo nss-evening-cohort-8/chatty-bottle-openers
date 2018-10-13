@@ -43,6 +43,30 @@ const deleteThisMessage = () => {
     }
   };
 
+let messageIWantToChange;
+const input = document.getElementById('textInput');
+
+const editThisMessage = () => {
+    const editButtons = document.getElementsByClassName('edit-button');
+    for (let i = 0; i < editButtons.length; i++) {
+        editButtons[i].addEventListener("click", (e) => {
+        input.focus(); 
+        messageIWantToChange = e.currentTarget.parentNode.childNodes[1];
+        input.value = messageIWantToChange.innerHTML;
+        })
+    };
+
+};
+
+const changeMessage = () => {
+    input.addEventListener('keyup', (e) => {
+        if (e.keyCode === 13) {
+            messageIWantToChange.innerHTML = input.value;
+        };
+    });
+};
+
+
 const largeFontEvent = () => {
     const checkBox = document.getElementById('customCheck2');
     checkBox.addEventListener('click', () => {
@@ -72,4 +96,10 @@ okButton.addEventListener('click', () => {
 })
 };
 
+<<<<<<< HEAD
 export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent, clearButtonfunction};
+=======
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent, clearButtonfunction, editThisMessage, changeMessage};
+
+
+>>>>>>> master
