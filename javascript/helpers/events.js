@@ -96,4 +96,29 @@ okButton.addEventListener('click', () => {
 })
 };
 
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, hideAlertEvent, highContrastEvent, clearButtonfunction, editThisMessage, changeMessage};
+let edit = 0
+
+const editCondition = () => {
+    edit = 0;
+    const editButtons = document.getElementsByClassName('edit-button');
+    for (let i = 0; i < editButtons.length; i++) {
+    editButtons[i].addEventListener("click", () => {
+    edit = 1;
+    })}
+};
+
+
+const eventHandeler = () => {
+    if (edit === 1) {
+        changeMessage();
+    }
+    if (edit === 0) {
+        createMessageEvent();
+        hideAlertEvent();
+    }
+}
+
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, clearButtonfunction, editCondition, eventHandeler, editThisMessage};
+
+
+
