@@ -1,0 +1,40 @@
+{
+    "ChatBot": [
+        {
+            "id": "angryBot",
+            "username": "Cartman",
+            "message": "**** that",
+            "message2": "**** you",
+            "message3": "screw you guys i'm going home",
+            "message4": "respect my authoritah",
+            "timestamp": ""
+        },
+        {
+            "id": "dumbassBot",
+            "username": "ED",
+            "message": "Buttered Toast",
+            "message2": "Grave",
+            "message3": "Chunck Puffs!!!! YUM",
+            "message4": "how can my feet smell if they don't have a nose",
+            "timestamp": ""
+        },
+        {
+            "id": "dadBot",
+            "username": "Timmy's Dad",
+            "message": "I'm respecting your by knocking but asserting my authority by coming in anyways",
+            "message2": "I'm a pencil pusher",
+            "message3": "Dinkleberg",
+            "message4": "UHHH My Brain hurt's",
+            "timestamp": ""
+        },
+        {
+            "id": "badwordsBot",
+            "username": "Piccolo",
+            "message": "language like that will not be allowed",
+            "message2": "Nerd!!!",
+            "message3": "why would i do that",
+            "message4": "Tom you've been replaced",
+            "timestamp": ""
+        }
+    ]
+}
