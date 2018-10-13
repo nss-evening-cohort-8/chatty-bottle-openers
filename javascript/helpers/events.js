@@ -64,12 +64,6 @@ const highContrastEvent = () => {
     });
 };
 
-changeBackgroundEvent = () => {
-    const colorBtn = document.getElementById('changeColorBtn');
-    colorBtn.addEventListener('click', () => {
-    })
-}
-
 const hideAlertEvent = () => {
 const okButton = document.getElementById('ok');
 const alert = document.getElementById("alert");

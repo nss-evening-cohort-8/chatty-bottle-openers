@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +43,38 @@
                 <input class="form-check-input" type="checkbox" id="customCheck2">
                 <label class="form-check-label" for="customCheck2">GIANT Text</label>
           </div>
+          <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Color Picker
+            </button>
         </div>
     </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Chose your own colors</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <div>
+                <input type="color" id="bodyColor" name="color"
+                        value="#f6b73c" />
+                <label for="body">Background</label>
+                <input type="color" id="colorWell" name="color"
+                        value="#f6b73c" />
+                <label for="body">Text</label>
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <div id="main" class="d-flex row p-4">
             <div class="p-3 col-2">
