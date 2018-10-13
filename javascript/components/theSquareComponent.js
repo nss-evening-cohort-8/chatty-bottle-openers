@@ -2,14 +2,13 @@ import {printToDom} from '../helpers/util.js';
 import {deleteThisMessage, selectedUser} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
-
-
+const alert = document.getElementById("alert")
 
 let newMessageArray = [];
 
 let newChatObject = 
     { 
-    id: "0",
+    id: 0,
     username: "",
     message: "",
     timestamp: ""
@@ -18,9 +17,9 @@ let newChatObject =
 const buildMessageArray = () => {
     newMessageArray = []
     if (selectedUser === "") {
-        alert("A user needs to be selected in order to add a message.")
+        alert.style.display = 'block';
     } else {
-    const newId = parseFloat(newChatObject.id) + 1
+    const newId = newChatObject.id + 1
     const inputValue = textInput.value
     newChatObject.id = newId;
     newChatObject.username = selectedUser;
@@ -29,9 +28,14 @@ const buildMessageArray = () => {
     }
 }
 
+const hideAlert = () => {
+    alert.style.display = 'none';
+}
+
 
 
 let chatData = [];
+let newChatData = [];
 
 
 const deleteAll = () => {
@@ -57,12 +61,12 @@ const getChatDataz = () => {
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
     chatDataArray.forEach((message) => {
-    domString += `<div id="${message.id} class="message container p-4">`;
+    domString += `<div id="${message.id}" class="message container">`;
     domString +=    `<div class="container d-flex row pt-3 ml-3">`;
     domString +=        `<p class="blue">${message.username}: </p>`;
     domString +=        `<p class=" ml-1 msg"> ${message.message}</p>`;
-    domString +=        `<button type="button" class="chat-btn delete-button ml-2">Delete</button>`;
-    domString +=        `<button type="button" class="chat-btn edit-button ml-2">Edit</button>`;
+    domString +=        `<button type="button" class="chat-btn delete-button ml-2"><span>&nbsp;Delete&nbsp;</span></button>`;
+    domString +=        `<button type="button" class="chat-btn edit-button ml-2"><span>&nbsp;&nbsp;Edit&nbsp;&nbsp;</span></button>`;
     domString +=        `<p class="msg-timestamp ml-4 font-weight-light">${moment().format('MMMM Do YYYY, h:mm:ss a')}</p>`;
     domString +=    `</div>`;
     domString += `</div>`;
@@ -72,4 +76,4 @@ const chatDataBuilder = (chatDataArray) => {
     };
 
 
-export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray};
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert};
