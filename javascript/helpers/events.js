@@ -104,7 +104,15 @@ okButton.addEventListener('click', () => {
 })
 };
 
-export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, clearButtonfunction, eventHandeler, editThisMessage};
+const messageLimit = () => {
+    let counter = 0;
+    const messages = document.getElementsByClassName("message");
+    for (let i = 0; i < messages.length; i++) {
+        counter++;
+        if (counter > 10) {
+            messages.item(0).remove();
+        }
+    }
+}
 
-
-
+export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, clearButtonfunction, eventHandeler, editThisMessage, hideAlertEvent, messageLimit};
