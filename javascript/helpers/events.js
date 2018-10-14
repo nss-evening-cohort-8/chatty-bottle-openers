@@ -6,9 +6,9 @@ let messageIWantToChange;
 const input = document.getElementById('textInput');
 
 const deleteAll = () => {
-    const messages = document.getElementById("theSquare")
-    messages.innerHTML = ""
-}
+    const messages = document.getElementById("theSquare");
+    messages.innerHTML = "";
+};
 
 const clearButtonfunction = () => {
     const clearButton = document.getElementById("clearAll-button");
@@ -19,25 +19,27 @@ const radiosEvent = () => {
     const radios = document.getElementsByClassName("radio");
     for (let i = 0; i < radios.length; i++) {
         radios[i].onclick = () => {
-           selectedUser = radios[i].value
-        }
-    }
+           selectedUser = radios[i].value;
+        };
+    };
 };
 
 const eventHandeler = () => {
     input.addEventListener('keyup', (e) => {
         if (e.keyCode === 13) {
-    if (edit === 1) {
-        changeMessage();
-        edit = 0;
-        input.value = '';
-    }
-    else {
-        edit = 0;
-        createMessageEvent();
-        hideAlertEvent();
-    }
-    }})}
+            if (edit === 1) {
+                changeMessage();
+                edit = 0;
+                input.value = '';
+            }
+            else {
+                edit = 0;
+                createMessageEvent();
+                hideAlertEvent();
+            };
+        };
+    });
+};
 
 const editThisMessage = () => {
     const editButtons = document.getElementsByClassName('edit-button');
@@ -47,21 +49,19 @@ const editThisMessage = () => {
         messageIWantToChange = e.currentTarget.parentNode.childNodes[1];
         input.value = messageIWantToChange.innerHTML;
         edit = 1;
-        })
+        });
     };
-
 };
 
 const changeMessage = () => {       
-messageIWantToChange.innerHTML = input.value;
-        };
-
+    messageIWantToChange.innerHTML = input.value;
+};
 
 const createMessageEvent = () => {
-          buildMessageArray();
-          chatDataBuilder(newMessageArray);
-          textInput.value = '';
-      }  
+    buildMessageArray();
+    chatDataBuilder(newMessageArray);
+    textInput.value = '';
+};
 
 const deleteThisMessage = () => {
     const deleteButtons = document.getElementsByClassName('delete-button');
@@ -71,9 +71,9 @@ const deleteThisMessage = () => {
         const buttonIClicked = e.target;
         const messageToDelete = buttonIClicked.parentNode.parentNode;
         messageToDelete.remove();
-      })
-    }
-  };
+      });
+    };
+};
 
 const largeFontEvent = () => {
     const checkBox = document.getElementById('customCheck2');
@@ -97,11 +97,11 @@ const highContrastEvent = () => {
 };
 
 const hideAlertEvent = () => {
-const okButton = document.getElementById('ok');
-const alert = document.getElementById("alert");
-okButton.addEventListener('click', () => {
+    const okButton = document.getElementById('ok');
+    const alert = document.getElementById("alert");
+    okButton.addEventListener('click', () => {
     alert.style.display = 'none';
-})
+    });
 };
 
 const messageLimit = () => {
@@ -111,8 +111,8 @@ const messageLimit = () => {
         counter++;
         if (counter > 10) {
             messages.item(0).remove();
-        }
-    }
-}
+        };
+    };
+};
 
 export {deleteThisMessage, selectedUser, radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, clearButtonfunction, eventHandeler, editThisMessage, hideAlertEvent, messageLimit};
