@@ -121,7 +121,6 @@ const getChatDataz = () => {
     return chatData;
 };
 
-
 const chatDataBuilder = (chatDataArray) => {
     let domString = '';
     chatDataArray.forEach((message) => {

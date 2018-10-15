@@ -1,14 +1,14 @@
 import {getChatData} from './data/chatData.js';
 import {hideAlert, chatBotFires} from './components/theSquareComponent.js'
 import {textPickerEvent, backgroundPickerEvent} from './components/themeSelector.js'
-import {radiosEvent, createMessageEvent, largeFontEvent, highContrastEvent, hideAlertEvent, clearButtonfunction, changeMessage} from './helpers/events.js'
+import {radiosEvent, largeFontEvent, highContrastEvent, clearButtonfunction, eventHandeler} from './helpers/events.js'
+
 
 const initializeApp = () => {
     hideAlert();
     getChatData();
     radiosEvent();
     largeFontEvent();
-    hideAlertEvent();
     highContrastEvent();
     clearButtonfunction();
     textPickerEvent();
@@ -16,5 +16,6 @@ const initializeApp = () => {
     changeMessage();
     createMessageEvent();
     chatBotFires();
+    eventHandeler(); 
 }
 initializeApp();
