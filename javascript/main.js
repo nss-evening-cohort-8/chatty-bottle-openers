@@ -3,7 +3,6 @@ import {hideAlert} from './components/theSquareComponent.js'
 import {textPickerEvent, backgroundPickerEvent} from './components/themeSelector.js'
 import {radiosEvent, largeFontEvent, highContrastEvent, clearButtonfunction, eventHandeler} from './helpers/events.js'
 
-
 const initializeApp = () => {
     hideAlert();
     getChatData();
@@ -14,5 +13,6 @@ const initializeApp = () => {
     textPickerEvent();
     backgroundPickerEvent();
     eventHandeler(); 
-}
+};
+
 initializeApp();

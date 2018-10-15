@@ -80,7 +80,7 @@ span:active {
 button:focus, button:active {
     outline: none;
     box-shadow: none;
- }
+}
 
 input {
     color: black;
@@ -94,9 +94,9 @@ input {
 input:focus, input:active {
     outline: none;
     box-shadow: none;
- }
+}
 
- #theSquare {
+#theSquare {
     border: 2px solid;
     border-bottom-color: #535353;
     border-right-color: #535353;
@@ -106,9 +106,9 @@ input:focus, input:active {
     padding: 2px;
     display: flex;
     flex-direction: column-reverse;
- }
+}
 
- .content-container, .alertMessage {
+.content-container, .alertMessage {
     border: 2px solid;
     border-bottom-color: #535353;
     border-right-color: #535353;
@@ -116,13 +116,13 @@ input:focus, input:active {
     border-top-color: #dbdbdb;
     background-color: #bfbfbf;
     padding: 2px;
- }
+}
 
- .users {
-     height: 100%;
- }
+.users {
+    height: 100%;
+}
 
- .chat-btn {
+.chat-btn {
     border: 2px solid;
     border-bottom-color: #444;
     border-right-color: #444;
@@ -134,13 +134,13 @@ input:focus, input:active {
     padding: 1px;
     height: 20px;
     width: 45px;
-  }
+}
 
- .giant-size {
+.giant-size {
      font-size: 40px;
- }
+}
 
- .section-header, .alertHead {
+.section-header, .alertHead {
     background-color: navy;
     padding: 2px 4px 3px 4px;
     position: relative;
@@ -150,7 +150,7 @@ input:focus, input:active {
     border-left-color: #a6a6a6;
     border-top-color: #a6a6a6;
     color: white;
- }
+}
 
 .section-header > h2 {
     font-weight: bold;
