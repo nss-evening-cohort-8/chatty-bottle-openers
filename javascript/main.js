@@ -3,7 +3,6 @@ import {hideAlert, chatBotFires, getChatbotDataz, test} from './components/theSq
 import {textPickerEvent, backgroundPickerEvent} from './components/themeSelector.js'
 import {radiosEvent, largeFontEvent, highContrastEvent, clearButtonfunction, eventHandeler} from './helpers/events.js'
 
-
 const initializeApp = () => {
     hideAlert();
     getChatData();
