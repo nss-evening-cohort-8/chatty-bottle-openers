@@ -1,4 +1,5 @@
 import {printToDom} from '../helpers/util.js';
+// import {getChatBotData} from '../data/chatBot.js'
 import {deleteThisMessage, selectedUser, clearButtonfunction, editThisMessage, messageLimit} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
@@ -32,6 +33,87 @@ const hideAlert = () => {
     alert.style.display = 'none';
 }
 
+let chatBotMessage = []
+const chatBotFires = () => {
+    const messages = document.getElementsByClassName('msg');
+    for (let i = 0; i < messages.length; i++) {
+    if (messages[i].innerHTML === "their geting rid of school holiday" ) {
+        chatBotMessage.push(chatBotArray[1])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "Fuck you cartman" ) {
+        chatBotMessage.push(chatBotArray[2])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "go home cartman" ) {
+        chatBotMessage.push(chatBotArray[3])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "I don't have do what you tell me" ) {
+        chatBotMessage.push(chatBotArray[4])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "what do you think Ed" ) {
+        chatBotMessage.push(chatBotArray[5])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "what do you think ed" ) {
+        chatBotMessage.push(chatBotArray[6])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "whats on your mind Ed" ) {
+        chatBotMessage.push(chatBotArray[8])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "what food do you like ed" ) {
+        chatBotMessage.push(chatBotArray[7])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "doing my homework" ) {
+        chatBotMessage.push(chatBotArray[9])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "timmys dad whats your job" ) {
+        chatBotMessage.push(chatBotArray[10])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "something went wrong" ) {
+        chatBotMessage.push(chatBotArray[11])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "e = mc^2" ) {
+        chatBotMessage.push(chatBotArray[12])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "are you a yoshi" ) {
+        chatBotMessage.push(chatBotArray[13])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "pokemon" ) {
+        chatBotMessage.push(chatBotArray[14])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "help me" ) {
+        chatBotMessage.push(chatBotArray[15])
+        chatDataBuilder(chatBotMessage);
+    }
+    else if (messages[i].innerHTML === "I'll friend you on myspace" ) {
+        chatBotMessage.push(chatBotArray[16])
+        chatDataBuilder(chatBotMessage);
+    }
+}}
+let chatbotData = [];
+const test = () => {
+    console.log(chatbotData)
+}
+const setChatbotData = (newArray) => {
+    chatbotData = newArray;
+};
+
+const getChatbotDataz = () => {
+    return chatbotData;
+};
+
 let chatData = [];
 
 const setChatData = (newArray) => {
@@ -56,9 +138,11 @@ const chatDataBuilder = (chatDataArray) => {
         domString += `</div>`;
     });
     printToDom(domString, 'theSquare');
+    chatBotFires();
     deleteThisMessage();
     editThisMessage();
     messageLimit();
 };
 
-export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction};
+
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction, getChatbotDataz, setChatbotData, chatBotFires, test};
