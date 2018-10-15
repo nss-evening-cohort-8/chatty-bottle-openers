@@ -1,8 +1,8 @@
-import {getChatbotDataz, setChatbotData} from "../components/theSquareComponent.js"
+import {getChatbotDataz, setChatbotData, chatDataBuilder} from "../components/theSquareComponent.js"
 function executeThisCodeAfterFileLoaded () {
     const data = JSON.parse(this.responseText);
     setChatbotData(data.ChatBot);
-    chatDataBuilder(getChatbotDataz());
+    getChatbotDataz();
     
   }
   
