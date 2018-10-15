@@ -1,5 +1,5 @@
 import {printToDom} from '../helpers/util.js';
-import {getChatBotData} from '../data/chatBot.js'
+// import {getChatBotData} from '../data/chatBot.js'
 import {deleteThisMessage, selectedUser, clearButtonfunction, editThisMessage, messageLimit} from '../helpers/events.js';
 
 const textInput = document.getElementById("textInput");
@@ -32,6 +32,7 @@ const buildMessageArray = () => {
 const hideAlert = () => {
     alert.style.display = 'none';
 }
+
 let chatBotMessage = []
 const chatBotFires = () => {
     const messages = document.getElementsByClassName('msg');
@@ -102,7 +103,9 @@ const chatBotFires = () => {
     }
 }}
 let chatbotData = [];
-
+const test = () => {
+    console.log(chatbotData)
+}
 const setChatbotData = (newArray) => {
     chatbotData = newArray;
 };
@@ -142,4 +145,4 @@ const chatDataBuilder = (chatDataArray) => {
 };
 
 
-export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction, getChatbotDataz, setChatbotData, chatBotFires};
+export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction, getChatbotDataz, setChatbotData, chatBotFires, test};

@@ -2,6 +2,7 @@ import {getChatbotDataz, setChatbotData} from "../components/theSquareComponent.
 function executeThisCodeAfterFileLoaded () {
     const data = JSON.parse(this.responseText);
     setChatbotData(data.ChatBot);
+    chatDataBuilder(getChatbotDataz());
     
   }
   
