@@ -46,67 +46,67 @@ const chatBotFires = () => {
     const messages = document.getElementsByClassName('msg');
     for (let i = 0; i < messages.length; i++) {
     if (messages[i].innerHTML === "their geting rid of school holiday" ) {
-        chatBotMessage.push(chatBotArray[1])
+        chatBotMessage.push(chatbotData[1])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "Fuck you cartman" ) {
-        chatBotMessage.push(chatBotArray[2])
+        chatBotMessage.push(chatbotData[2])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "go home cartman" ) {
-        chatBotMessage.push(chatBotArray[3])
+        chatBotMessage.push(chatbotData[3])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "I don't have do what you tell me" ) {
-        chatBotMessage.push(chatBotArray[4])
+        chatBotMessage.push(chatbotData[4])
         chatDataBuilder(chatBotMessage);
     }
-    else if (messages[i].innerHTML === "what do you think Ed" ) {
-        chatBotMessage.push(chatBotArray[5])
+    else if (messages[i].innerHTML === "what do you" ) {
+        chatBotMessage.push(chatbotData[5])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "what do you think ed" ) {
-        chatBotMessage.push(chatBotArray[6])
+        chatBotMessage.push(chatbotData[6])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "whats on your mind Ed" ) {
-        chatBotMessage.push(chatBotArray[8])
+        chatBotMessage.push(chatbotData[8])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "what food do you like ed" ) {
-        chatBotMessage.push(chatBotArray[7])
+        chatBotMessage.push(chatbotData[7])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "doing my homework" ) {
-        chatBotMessage.push(chatBotArray[9])
+        chatBotMessage.push(chatbotData[9])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "timmys dad whats your job" ) {
-        chatBotMessage.push(chatBotArray[10])
+        chatBotMessage.push(chatbotData[10])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "something went wrong" ) {
-        chatBotMessage.push(chatBotArray[11])
+        chatBotMessage.push(chatbotData[11])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "e = mc^2" ) {
-        chatBotMessage.push(chatBotArray[12])
+        chatBotMessage.push(chatbotData[12])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "are you a yoshi" ) {
-        chatBotMessage.push(chatBotArray[13])
+        chatBotMessage.push(chatbotData[13])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "pokemon" ) {
-        chatBotMessage.push(chatBotArray[14])
+        chatBotMessage.push(chatbotData[14])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "help me" ) {
-        chatBotMessage.push(chatBotArray[15])
+        chatBotMessage.push(chatbotData[15])
         chatDataBuilder(chatBotMessage);
     }
     else if (messages[i].innerHTML === "I'll friend you on myspace" ) {
-        chatBotMessage.push(chatBotArray[16])
+        chatBotMessage.push(chatbotData[16])
         chatDataBuilder(chatBotMessage);
     }
 }}
@@ -128,7 +128,7 @@ const chatDataBuilder = (chatDataArray) => {
         domString += `<div id="${message.id}" class="message container">`;
         domString +=    `<div class="container d-flex row pt-3 ml-3">`;
         domString +=        `<p class="blue">${message.username}: </p>`;
-        domString +=        `<p class=" ml-1 msg"> ${message.message}</p>`;
+        domString +=        `<p class=" ml-1 msg">${message.message}</p>`;
         domString +=        `<button type="button" class="chat-btn delete-button ml-2"><span>&nbsp;Delete&nbsp;</span></button>`;
         domString +=        `<button type="button" class="chat-btn edit-button ml-2"><span>&nbsp;&nbsp;Edit&nbsp;&nbsp;</span></button>`;
         domString +=        (message.timestamp === "") ? `<p class="msg-timestamp ml-4 font-weight-light">${moment().format('MMMM Do YYYY, h:mm:ss a')}</p>`: `<p class="msg-timestamp ml-4 font-weight-light">${message.timestamp}</p>`; 
