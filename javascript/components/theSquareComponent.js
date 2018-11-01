@@ -44,71 +44,86 @@ const getChatbotDataz = () => {
 let chatBotMessage = []
 const chatBotFires = () => {
     const messages = document.getElementsByClassName('msg');
-    for (let i = 0; i < messages.length; i++) {
+    console.log(messages[0].innerHTML)
+    let counter = 0
+    for (let i = 0; i < messages.length && counter < 1; i++) {
+        
     if (messages[i].innerHTML === "their geting rid of school holiday" ) {
-        chatBotMessage.push(chatbotData[1])
-        chatDataBuilder(chatBotMessage);
+        chatBotMessage.push(chatbotData[0])
+        console.log(counter);
+        counter++
+        console.log(counter);
+        
+        // return chatDataBuilder(chatBotMessage);
     }
-    else if (messages[i].innerHTML === "Fuck you cartman" ) {
-        chatBotMessage.push(chatbotData[2])
-        chatDataBuilder(chatBotMessage);
+    // else if (messages[i].innerHTML === "Fuck you cartman" ) {
+    //     chatBotMessage.push(chatbotData[1])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "go home cartman" ) {
+    //     chatBotMessage.push(chatbotData[2])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "I don't have do what you tell me" ) {
+    //     chatBotMessage.push(chatbotData[3])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "what do you" ) {
+    //     chatBotMessage.push(chatbotData[4])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "what do you think ed" ) {
+    //     chatBotMessage.push(chatbotData[5])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "what food do you like ed" ) {
+    //     chatBotMessage.push(chatbotData[6])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "whats on your mind Ed" ) {
+    //     chatBotMessage.push(chatbotData[7])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "doing my homework" ) {
+    //     chatBotMessage.push(chatbotData[8])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "timmys dad whats your job" ) {
+    //     chatBotMessage.push(chatbotData[9])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "something went wrong" ) {
+    //     chatBotMessage.push(chatbotData[10])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "this" ) {
+    //     chatBotMessage.push(chatbotData[11])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "are you a yoshi" ) {
+    //     chatBotMessage.push(chatbotData[12])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "pokemon" ) {
+    //     chatBotMessage.push(chatbotData[13])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    // else if (messages[i].innerHTML === "help me" ) {
+    //     console.log("hi")
+    // chatBotMessage.push(chatbotData[14])  
+    //     return chatDataBuilder(chatBotMessage); 
+    // }
+    // else if (messages[i].innerHTML === "I'll friend you on myspace" ) {
+    //     chatBotMessage.push(chatbotData[15])
+    //     return chatDataBuilder(chatBotMessage);
+    // }
+    else {
+        console.log("it failed.")
     }
-    else if (messages[i].innerHTML === "go home cartman" ) {
-        chatBotMessage.push(chatbotData[3])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "I don't have do what you tell me" ) {
-        chatBotMessage.push(chatbotData[4])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "what do you" ) {
-        chatBotMessage.push(chatbotData[5])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "what do you think ed" ) {
-        chatBotMessage.push(chatbotData[6])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "whats on your mind Ed" ) {
-        chatBotMessage.push(chatbotData[8])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "what food do you like ed" ) {
-        chatBotMessage.push(chatbotData[7])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "doing my homework" ) {
-        chatBotMessage.push(chatbotData[9])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "timmys dad whats your job" ) {
-        chatBotMessage.push(chatbotData[10])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "something went wrong" ) {
-        chatBotMessage.push(chatbotData[11])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "e = mc^2" ) {
-        chatBotMessage.push(chatbotData[12])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "are you a yoshi" ) {
-        chatBotMessage.push(chatbotData[13])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "pokemon" ) {
-        chatBotMessage.push(chatbotData[14])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "help me" ) {
-        chatBotMessage.push(chatbotData[15])
-        chatDataBuilder(chatBotMessage);
-    }
-    else if (messages[i].innerHTML === "I'll friend you on myspace" ) {
-        chatBotMessage.push(chatbotData[16])
-        chatDataBuilder(chatBotMessage);
-    }
+    return chatBotMessage;
+    // else if (messages[i].innerHTML == chatbotData())
+    //     return chatDataBuilder(chatMessage);
+    // }
 }}
 
 
@@ -136,11 +151,12 @@ const chatDataBuilder = (chatDataArray) => {
         domString += `</div>`;
     });
     printToDom(domString, 'theSquare');
-    chatBotFires();
+    
     deleteThisMessage();
     editThisMessage();
     messageLimit();
+    
 };
-
+chatBotFires(chatDataBuilder());
 
 export {chatDataBuilder, setChatData, getChatDataz, buildMessageArray, textInput, newMessageArray, hideAlert, clearButtonfunction, getChatbotDataz, setChatbotData};
